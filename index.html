@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Calculadora simples</title>
+</head>
+<body>
+    <div class="entrada">
+        <div class="valores">
+            <section>
+                <label class="numero">
+                    Valor 1
+                    <input type="number" id="valor-1">
+                </label>
+            </section>    
+            <div class="operadores">
+                <section class="operadores-linha">
+                    <button onclick="selecionar(this.id)" type="button" id="adicionar">+</button>
+                    <button onclick="selecionar(this.id)" type="button" id="subtrair">-</button>
+                </section>
+                <section class="operadores-linha">
+                    <button onclick="selecionar(this.id)" type="button" id="multiplicar">X</button>
+                    <button onclick="selecionar(this.id)" type="button" id="dividir">/</button>
+                </section>
+            </div>
+            <section>
+                <label class="numero">
+                    Valor 2
+                    <input type="number" id="valor-2">
+                </label>
+            </section>
+        </div>
+        <div class="container-igual">
+            <button onclick="calcular()" type="button" class="botao-igual">=</button>
+            <p class="container-resultado" id="resultado">0</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+body {
+    background-color: aliceblue;
+    margin: 15% 30%;
+    padding: 1rem;
+    border: 5px solid #000;
+    border-radius: 50px;
+}
+
+.entrada {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.entrada .valores {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.entrada .operadores {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.operadores .operadores-linha {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.entrada .container-igual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botao-igual {
+    height: 30%;
+    margin: 45% 0;
+}
+
+.container-resultado {
+    margin: 1rem;
+    padding: 0.5rem;
+    border: 2px solid #708090; 
+    align-content: center;
+    height: 10%;
+}
+
+/* Para navegadores WebKit (Chrome, Safari, Edge) */
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Para Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
