@@ -19,18 +19,27 @@ function calcular() {
 
     resultado = parseInt(document.getElementById('resultado').value);
 
-    if (operador == 'adicionar') {
-        adicionar();
-    } else if (operador == 'subtrair') {
-        subtrair();
-    } else if (operador == 'multiplicar') {
-        multiplicar();
-    } else if (operador == 'dividir') {
-        dividir();
-    } else if (operador == '') {
-        alert('Selecione o tipo de operação')
-        return;
+    switch (operador) {
+        case 'adicionar':
+            adicionar();
+            break;
+
+        case 'subtrair':
+            subtrair();
+            break;
+        
+        case 'multiplicar':
+            multiplicar();
+            break
+        case 'dividir':
+            dividir();
+            break;
+        
+        default:
+            alert('Selecione o tipo de operação')
+            return;
     }
+
     document.getElementById('resultado').innerHTML = resultado;
     document.getElementById('valor-1').value = '';
     document.getElementById('valor-2').value = '';
@@ -39,16 +48,19 @@ function calcular() {
 function adicionar() {
     let operacao = valor1 + valor2;
     resultado = operacao;
+    operador = '';
 }
 
 function subtrair() {
     let operacao = valor1 - valor2;
     resultado = operacao;
+    operador = '';
 }
 
 function multiplicar() {
     let operacao = valor1 * valor2;
     resultado = operacao;
+    operador = '';
 }
 
 function dividir() {
@@ -59,4 +71,5 @@ function dividir() {
 
     let operacao  = valor1 / valor2;
     resultado = operacao;
+    operador = '';
 }
